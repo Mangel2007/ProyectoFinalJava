@@ -1,4 +1,4 @@
-package com.uniquindio.migueldiaz.sercivios;
+package com.uniquindio.migueldiaz.servicios;
 
 public class FuncionalidadesExtendidas {
 
