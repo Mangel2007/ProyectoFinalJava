@@ -24,6 +24,7 @@ src/
 ├── main/
 │   └── java/
 │       └── com.uniquindio.migueldiaz/
+│           ├── enums/      # Tipos fijos (Vehiculo, Usuario)
 │           ├── modelo/      # Clases Entidad (Vehiculo, Usuario, Espacio)
 │           ├── servicio/    # Lógica de negocio (Calculo de tarifas)
 │           └── vista/       # Interfaz de usuario / Menú
