@@ -9,5 +9,4 @@ public class Vehiculo {
     String horaIngreso;
     String espacioAsignado;
     String estado;
-    
 }
