@@ -1,5 +1,5 @@
 package com.uniquindio.migueldiaz.enums;
-
+/*
 public class MainPrueba extends TipoVehiculo {
 
     void main(){
@@ -9,3 +9,5 @@ public class MainPrueba extends TipoVehiculo {
     }
 
 }
+
+ */
