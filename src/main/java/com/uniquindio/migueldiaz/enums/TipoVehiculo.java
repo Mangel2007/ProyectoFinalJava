@@ -7,12 +7,12 @@ public class TipoVehiculo {
     }
 
     // Se define y simplifica las constantes
-    public TipoDeVehiculo carro = TipoDeVehiculo.CARRO;
-    private TipoDeVehiculo motocicleta = TipoDeVehiculo.MOTOCICLETA;
-    private TipoDeVehiculo bicicleta = TipoDeVehiculo.BICICLETA;
+    private static TipoDeVehiculo carro = TipoDeVehiculo.CARRO;
+    private static TipoDeVehiculo motocicleta = TipoDeVehiculo.MOTOCICLETA;
+    private static TipoDeVehiculo bicicleta = TipoDeVehiculo.BICICLETA;
 
     // Creación de una clase que contenga el enum
-    public class EnumVehiculos {
+    public static class EnumVehiculos {
         private TipoDeVehiculo tipoDeVehiculo;
 
 

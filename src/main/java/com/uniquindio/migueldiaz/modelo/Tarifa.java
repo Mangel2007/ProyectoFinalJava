@@ -6,7 +6,7 @@ public class Tarifa extends TipoVehiculo {
     private int descuento;
 
     // Se definen el valor por hora por vehículo correspondiente
-    protected static int tarifaCarro = 5000;
+    public static int tarifaCarro = 5000;
     protected static int tarifaMotocicleta = 2000;
     protected static int tarifaBicicleta = 500;
 

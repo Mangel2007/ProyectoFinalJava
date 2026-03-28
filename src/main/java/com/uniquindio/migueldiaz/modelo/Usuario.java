@@ -1,7 +1,9 @@
 package com.uniquindio.migueldiaz.modelo;
 
 public class Usuario {
-    String nombre;
-    String identificacion;
-    String tipoUsuario;
+    public String nombre;
+    protected String identificacion;
+    protected String tipoUsuario;
+    public String vehiculo;
+    private Boolean aplicaDescuento;
 }
