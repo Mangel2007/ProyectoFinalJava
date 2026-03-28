@@ -7,7 +7,7 @@ public class TipoVehiculo {
     }
 
     // Se define y simplifica las constantes
-    private TipoDeVehiculo carro = TipoDeVehiculo.CARRO;
+    public TipoDeVehiculo carro = TipoDeVehiculo.CARRO;
     private TipoDeVehiculo motocicleta = TipoDeVehiculo.MOTOCICLETA;
     private TipoDeVehiculo bicicleta = TipoDeVehiculo.BICICLETA;
 
