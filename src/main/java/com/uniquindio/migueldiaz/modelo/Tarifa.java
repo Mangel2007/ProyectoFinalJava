@@ -2,16 +2,27 @@ package com.uniquindio.migueldiaz.modelo;
 import com.uniquindio.migueldiaz.enums.TipoVehiculo;
 
 public class Tarifa extends TipoVehiculo {
-    int valorPorHora;
-    int descuento;
+    private int horas;
+    private int descuento;
 
-    public int tarifaCarro = 5000;
+    // Se definen el valor por hora por vehículo correspondiente
+    protected static int tarifaCarro = 5000;
+    protected static int tarifaMotocicleta = 2000;
+    protected static int tarifaBicicleta = 500;
 
-
-    // Definir clase en la cual se determinaran y conectaran los valores dependiendo tipo de vehículo
-    public class definicionTarifas {
-        int carro = tarifaCarro;
+    //creación getters
+    public static int getTarifaCarro(){
+        return tarifaCarro;
+    }
+    public static int getTarifaMotocicleta(){
+        return tarifaMotocicleta;
+    }
+    public static int getTarifaBicicleta(){
+        return tarifaBicicleta;
     }
 
-
+    // Se crean inner class temporales para los tests (Solo activar para comprobar)
+    protected static class tarifaCarro extends Tarifa{}
+    protected static class tarifaMotocicleta extends Tarifa{}
+    protected static class tarifaBicicleta extends Tarifa{}
 }
