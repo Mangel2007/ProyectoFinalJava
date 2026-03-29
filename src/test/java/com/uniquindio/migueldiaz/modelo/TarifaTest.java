@@ -2,6 +2,7 @@ package com.uniquindio.migueldiaz.modelo;
 import com.uniquindio.migueldiaz.enums.TipoVehiculo;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import com.uniquindio.migueldiaz.enums.TipoUsuario;
 
 
 class TarifaTest {
@@ -35,8 +36,10 @@ class UsuarioTest{
     void ComprobacionInformacionUsuarios() {
 
         // Se comprueban que los datos se están guardando correctamente
-        Usuario usuario1 = new Usuario("Miguel", "1092852740", "Administrativo", "Toyota", TipoVehiculo.CARRO, true);
-        Usuario usuario2 = new Usuario("Erika", "1095181507", "Porfesor", "Kawasaki", TipoVehiculo.MOTOCICLETA, true);
-        Usuario usuario3 = new Usuario("Panda", "1029374368", "Estudiante", "BMX", TipoVehiculo.BICICLETA, false);
+        Usuario usuario1 = new Usuario("Miguel", "1092852740", TipoUsuario.ADMINISTRATIVO, "Toyota", TipoVehiculo.CARRO, true);
+        Usuario usuario2 = new Usuario("Erika", "1095181507", TipoUsuario.DOCENTE, "Kawasaki", TipoVehiculo.MOTOCICLETA, true);
+        Usuario usuario3 = new Usuario("Panda", "1029374368", TipoUsuario.ESTUDIANTE, "BMX", TipoVehiculo.BICICLETA, false);
+        Usuario usuario4 = new Usuario("RENE", "3232194294", TipoUsuario.VISITANTE, "BMX", TipoVehiculo.CARRO, true);
+
     }
 }
