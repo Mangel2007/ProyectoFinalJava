@@ -1,7 +1,6 @@
 package com.uniquindio.migueldiaz.modelo;
-import com.uniquindio.migueldiaz.enums.TipoVehiculo;
 
-public class Tarifa extends TipoVehiculo {
+public class Tarifa {
     private int horas;
     private int descuento;
 
