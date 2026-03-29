@@ -1,9 +1,9 @@
-# Sistema de Gestión de Parqueadero Central - UniQuindío 🚗🏢
+# Sistema de Gestión de Parqueadero Central - UniQuindío 
 
 ![Java](https://img.shields.io/badge/Java-17%2B-ED8B00?style=for-the-badge&logo=java&logoColor=white)
 ![Maven](https://img.shields.io/badge/Maven-3.8.1-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)
 
-## 📝 Descripción
+##  Descripción
 Este proyecto surge como una solución a la necesidad de modernizar el control de vehículos en el **Parqueadero Central de la Universidad del Quindío**. El sistema reemplaza el registro manual por una plataforma digital que automatiza la asignación de espacios, el control de tiempos de permanencia y el cálculo preciso de tarifas.
 
 ## ✨ Características Principales
@@ -13,12 +13,12 @@ Este proyecto surge como una solución a la necesidad de modernizar el control d
 - **Administración de Usuarios:** Control de acceso para personal autorizado y tipos de vehículos (motos, carros, etc.).
 - **Interfaz Interactiva:** Menú por consola (o GUI) diseñado para operaciones rápidas y seguras.
 
-## 🛠️ Tecnologías Utilizadas
+##  Tecnologías Utilizadas
 - **Lenguaje:** "Java 25.0.2" 2026-01-20
 - **Gestor de Dependencias:** Maven
 - **Arquitectura:** Programación Orientada a Objetos (POO)
 
-## 📂 Estructura del Proyecto
+##  Estructura del Proyecto
 ```text
 src/
 ├── main/

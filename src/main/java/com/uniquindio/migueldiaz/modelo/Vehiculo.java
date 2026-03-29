@@ -1,7 +1,7 @@
 package com.uniquindio.migueldiaz.modelo;
 // CLASE PADRE
 
-public class Vehiculo extends Usuario {
+public class Vehiculo {
     String placa;
     String tipoVehiculo;
     String estado;

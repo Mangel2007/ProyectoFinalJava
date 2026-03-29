@@ -7,18 +7,21 @@ public class TipoVehiculo {
     }
 
     // Se define y simplifica las constantes
-    private static TipoDeVehiculo carro = TipoDeVehiculo.CARRO;
-    private static TipoDeVehiculo motocicleta = TipoDeVehiculo.MOTOCICLETA;
-    private static TipoDeVehiculo bicicleta = TipoDeVehiculo.BICICLETA;
+    protected static TipoDeVehiculo carro = TipoDeVehiculo.CARRO;
+    protected static TipoDeVehiculo motocicleta = TipoDeVehiculo.MOTOCICLETA;
+    protected static TipoDeVehiculo bicicleta = TipoDeVehiculo.BICICLETA;
 
     // Creación de una clase que contenga el enum
     public static class EnumVehiculos {
-        private TipoDeVehiculo tipoDeVehiculo;
+        protected TipoDeVehiculo tipoDeVehiculo;
 
 
         // Creación de constructor para enum de vehículos
         public EnumVehiculos(TipoDeVehiculo tipoDeVehiculo) {
             this.tipoDeVehiculo = tipoDeVehiculo;
+        }
+        public TipoDeVehiculo getEnumVehiculos() {
+            return tipoDeVehiculo;
         }
     }
 }
