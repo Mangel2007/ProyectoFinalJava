@@ -1,5 +1,7 @@
 package com.uniquindio.migueldiaz.vista;
 import com.uniquindio.migueldiaz.configuracion.ConexionBD;
+import com.uniquindio.migueldiaz.dao.UsuarioDAO;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -43,8 +45,21 @@ public class PantallaLogin {
 
                 String usuarioIngresado = campoUsuario.getText();
                 String claveIngresada = new String(campoClave.getPassword());
-                if (usuarioIngresado.equals("admin") && claveIngresada.equals("1234")) {
-                    JOptionPane.showMessageDialog(null, "¡Bienvenido al sistema!");
+                // Lógica de validación
+                if (UsuarioDAO.verificarLogin(usuarioIngresado, claveIngresada)) {
+                    String rol = UsuarioDAO.obtenerRol(usuarioIngresado);
+
+                    // Cerramos la ventana de login
+                    ventana.dispose();
+
+                    // Verificamos qué ventana abrir según el rol
+                    if (rol.equals("ADMIN")) {
+                        // Abrimos la pantalla que acabamos de crear
+                        new PantallaAdmin();
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Bienvenido usuario normal. (Pantalla estándar en construcción)");
+                        // Aquí luego pondremos: new PantallaUsuarioEstandar();
+                    }
                 } else {
                     JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
                 }
