@@ -1,8 +1,13 @@
 package com.uniquindio.migueldiaz.vista;
-import com.uniquindio.migueldiaz.dao.UsuarioDAO; // Importamos nuestro DAO (Antes GestorUsuarios)
+import com.uniquindio.migueldiaz.dao.UsuarioDAO;
+import com.uniquindio.migueldiaz.enums.TipoUsuario;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import static com.uniquindio.migueldiaz.enums.TipoUsuario.ESTUDIANTE;
+import static com.uniquindio.migueldiaz.enums.TipoUsuario.DOCENTE;
+import static com.uniquindio.migueldiaz.enums.TipoUsuario.ADMINISTRATIVO;
+
 
 public class PantallaAdmin {
 
@@ -39,12 +44,11 @@ public class PantallaAdmin {
         panel.add(campoClave);
 
 
-        JLabel etiquetaRol = new JLabel("Asignar Rol:");
+        JLabel etiquetaRol = new JLabel("Asignar tipo de usuario:");
         etiquetaRol.setBounds(30, 110, 100, 25);
         panel.add(etiquetaRol);
 
-        String[] opcionesRoles = {"ESTANDAR", "ADMIN"};
-        JComboBox<String> desplegableRoles = new JComboBox<>(opcionesRoles);
+        JComboBox<TipoUsuario> desplegableRoles = new JComboBox<>(TipoUsuario.values());
         desplegableRoles.setBounds(150, 110, 180, 25);
         panel.add(desplegableRoles);
 
@@ -60,14 +64,13 @@ public class PantallaAdmin {
                 // Obtenemos los datos escritos
                 String nuevoNombre = campoUsuario.getText();
                 String nuevaClave = campoClave.getText();
-                String rolSeleccionado = (String) desplegableRoles.getSelectedItem();
-
+                TipoUsuario rolUsuario = (TipoUsuario) desplegableRoles.getSelectedItem();
 
                 if (nuevoNombre.isEmpty() || nuevaClave.isEmpty()) {
                     JOptionPane.showMessageDialog(null, "Por favor, llena todos los campos.", "Error", JOptionPane.ERROR_MESSAGE);
                 } else {
 
-                    UsuarioDAO.registrarNuevoUsuario(nuevoNombre, nuevaClave, rolSeleccionado);
+                    UsuarioDAO.registrarNuevoUsuario(nuevoNombre, nuevaClave, rolUsuario.name());
 
                     JOptionPane.showMessageDialog(null, "¡Usuario '" + nuevoNombre + "' creado con éxito!");
 
